@@ -9,10 +9,7 @@
 
   <modules>
     <module>file-service</module>
-    <module>processing-service</module>
-    <module>notification-service</module>
-    <module>file-service</module>
-    <module>antifraud-service</module>
+    <module>app</module>
   </modules>
 
   <parent>

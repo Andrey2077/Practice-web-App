@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="xsd/client_data_schema.xsd">
+
+  <Clients>
+    <Client>
+      <client_id>1</client_id>
+      <first_name>Ivan</first_name>
+      <last_name>Ivanov</last_name>
+      <email>ivan@example.com</email>
+      <created_at>2023-01-10</created_at>
+    </Client>
+    <Client>
+      <client_id>2</client_id>
+      <first_name>Anna</first_name>
+      <last_name>Petrova</last_name>
+      <email>anna@example.com</email>
+      <created_at>2023-02-15</created_at>
+    </Client>
+  </Clients>
+
+  <Accounts>
+    <Account>
+      <account_id>101</account_id>
+      <client_id>1</client_id>
+      <account_type>savings</account_type>
+      <balance>15000.00</balance>
+      <opened_at>2023-01-12</opened_at>
+    </Account>
+    <Account>
+      <account_id>102</account_id>
+      <client_id>1</client_id>
+      <account_type>checking</account_type>
+      <balance>2300.50</balance>
+      <opened_at>2023-01-15</opened_at>
+    </Account>
+    <Account>
+      <account_id>103</account_id>
+      <client_id>2</client_id>
+      <account_type>savings</account_type>
+      <balance>9800.75</balance>
+      <opened_at>2023-02-20</opened_at>
+    </Account>
+  </Accounts>
+
+  <Transactions>
+    <Transaction>
+      <transaction_id>1001</transaction_id>
+      <account_id>101</account_id>
+      <amount>200.00</amount>
+      <timestamp>2023-03-01T10:00:00</timestamp>
+      <description>Deposit</description>
+    </Transaction>
+    <Transaction>
+      <transaction_id>1002</transaction_id>
+      <account_id>101</account_id>
+      <amount>-50.00</amount>
+      <timestamp>2023-03-02T14:30:00</timestamp>
+      <description>Withdrawal</description>
+    </Transaction>
+    <Transaction>
+      <transaction_id>1003</transaction_id>
+      <account_id>102</account_id>
+      <amount>1000.00</amount>
+      <timestamp>2023-03-05T09:00:00</timestamp>
+      <description>Salary</description>
+    </Transaction>
+    <Transaction>
+      <transaction_id>1004</transaction_id>
+      <account_id>103</account_id>
+      <amount>-300.00</amount>
+      <timestamp>2023-03-10T16:45:00</timestamp>
+      <description>Payment</description>
+    </Transaction>
+  </Transactions>
+
+</Data>

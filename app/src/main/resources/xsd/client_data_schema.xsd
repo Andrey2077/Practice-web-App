@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Root element -->
+  <xs:element name="Data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Clients" type="ClientsType"/>
+        <xs:element name="Accounts" type="AccountsType"/>
+        <xs:element name="Transactions" type="TransactionsType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Clients list -->
+  <xs:complexType name="ClientsType">
+    <xs:sequence>
+      <xs:element name="Client" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="client_id" type="xs:int"/>
+            <xs:element name="first_name" type="xs:string"/>
+            <xs:element name="last_name" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="created_at" type="xs:date"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Accounts list -->
+  <xs:complexType name="AccountsType">
+    <xs:sequence>
+      <xs:element name="Account" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="account_id" type="xs:int"/>
+            <xs:element name="client_id" type="xs:int"/>
+            <xs:element name="account_type" type="xs:string"/>
+            <xs:element name="balance" type="xs:decimal"/>
+            <xs:element name="opened_at" type="xs:date"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Transactions list -->
+  <xs:complexType name="TransactionsType">
+    <xs:sequence>
+      <xs:element name="Transaction" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="transaction_id" type="xs:int"/>
+            <xs:element name="account_id" type="xs:int"/>
+            <xs:element name="amount" type="xs:decimal"/>
+            <xs:element name="timestamp" type="xs:dateTime"/>
+            <xs:element name="description" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
